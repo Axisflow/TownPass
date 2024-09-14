@@ -28,6 +28,7 @@ enum MyServiceItemId {
   library,
   locationSearch,
   zoo,
+  recommended,
   ;
 }
 
@@ -173,6 +174,13 @@ extension MyServiceIdExt on MyServiceItemId {
           icon: Assets.svg.iconZoo24.svg(),
           category: MyServiceCategory.explore,
           destinationUrl: '',
+        ),
+        MyServiceItemId.recommended => MyServiceItem(
+          title: '台北自由配',
+          description: '推薦台北最適合的旅遊路線',
+          icon: Assets.svg.recommended.svg(),
+          category: MyServiceCategory.explore,
+          destinationUrl: 'http://192.168.137.1:5173/',
         ),
     };
   }
